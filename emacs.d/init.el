@@ -26,6 +26,9 @@
 (load "show-tab-zenkaku-space")
 (load "brackets")
 
+(when (eq system-type 'darwin)
+      (load "init-darwin"))
+
 (load "init-color-theme")
 (load "init-auto-complete")
 (load "init-drill-instructor")
@@ -46,6 +49,3 @@
 (load "init-sass-mode")
 (load "init-emacs-lisp-mode")
 (load "init-lisp-interaction-mode")
-
-
-
