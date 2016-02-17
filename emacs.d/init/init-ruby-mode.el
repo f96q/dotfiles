@@ -2,6 +2,8 @@
   "Mode for editing ruby source files" t)
 (setq auto-mode-alist
       (append '(("\\.rb$" . ruby-mode)) auto-mode-alist))
+(setq auto-mode-alist
+      (append '(("\\.rake$" . ruby-mode)) auto-mode-alist))
 
 (add-hook 'ruby-mode-hook
           '(lambda()
