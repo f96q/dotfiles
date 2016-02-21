@@ -49,3 +49,4 @@
 (load "init-sass-mode")
 (load "init-emacs-lisp-mode")
 (load "init-lisp-interaction-mode")
+(load "init-term-paste-mode")
