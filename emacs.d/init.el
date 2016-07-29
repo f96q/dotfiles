@@ -37,6 +37,7 @@
 (load "init-wdired")
 (load "init-ag")
 (load "init-wgrep")
+(load "init-smart-compile")
 
 (load "init-c++-mode")
 (load "init-ruby-mode")
