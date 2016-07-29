@@ -43,6 +43,7 @@
 (load "init-javascript-mode")
 (load "init-coffee-mode")
 (load "init-swift-mode")
+(load "init-go-mode")
 (load "init-haml-mode")
 (load "init-yaml-mode")
 (load "init-scss-mode")
