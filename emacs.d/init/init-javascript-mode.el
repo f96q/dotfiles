@@ -5,6 +5,9 @@
 (setq auto-mode-alist
       (append '(("\\.es6$" . javascript-mode))
               auto-mode-alist))
+(setq auto-mode-alist
+      (append '(("\\.vue$" . javascript-mode))
+              auto-mode-alist))
 
 (add-hook 'javascript-mode-hook
           '(lambda()
