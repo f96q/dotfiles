@@ -26,6 +26,7 @@
     haml-mode
     sass-mode
     scss-mode
+    guru-mode
    ))
 
 (let ((not-installed (loop for x in installing-package-list
