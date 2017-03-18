@@ -21,6 +21,7 @@
     ruby-mode
     coffee-mode
     go-mode
+    elixir-mode
     yaml-mode
     haml-mode
     sass-mode
