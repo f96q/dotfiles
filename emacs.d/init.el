@@ -13,8 +13,6 @@
     init-loader
     auto-save-buffers-enhanced
     ag
-    color-theme
-    color-theme-library
     wdired
     wgrep
     wgrep-ag
