@@ -20,6 +20,7 @@
     wgrep-ag
     swift-mode
     ruby-mode
+    js3-mode
     coffee-mode
     go-mode
     elixir-mode
