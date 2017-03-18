@@ -11,6 +11,7 @@
 (defvar installing-package-list
   '(
     init-loader
+    auto-save-buffers-enhanced
     ag
     color-theme
     color-theme-library
