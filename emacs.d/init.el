@@ -23,22 +23,52 @@
 (setq load-path
       (cons "~/.emacs.d/init" load-path))
 
-(load "show-tab-zenkaku-space")
-(load "brackets")
-
 (when (eq system-type 'darwin)
       (load "init-darwin"))
 
+;; package
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(require 'cl)
+
+(defvar installing-package-list
+  '(
+    ag
+    color-theme
+    color-theme-library
+    wdired
+    wgrep
+    wgrep-ag
+    swift-mode
+    ruby-mode
+    coffee-mode
+    go-mode
+    yaml-mode
+    haml-mode
+    sass-mode
+    scss-mode
+   ))
+
+(let ((not-installed (loop for x in installing-package-list
+                             when (not (package-installed-p x))
+                             collect x)))
+  (when not-installed
+    (package-refresh-contents)
+    (dolist (pkg not-installed)
+      (package-install pkg))))
+
+(load "brackets")
+(load "show-tab-zenkaku-space")
 (load "init-color-theme")
-(load "init-auto-complete")
 (load "init-drill-instructor")
 (load "init-auto-save-buffers")
 (load "init-dabbrev")
 (load "init-wdired")
 (load "init-ag")
 (load "init-wgrep")
-(load "init-smart-compile")
-
 (load "init-c++-mode")
 (load "init-ruby-mode")
 (load "init-javascript-mode")
