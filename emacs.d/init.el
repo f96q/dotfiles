@@ -16,6 +16,7 @@
     wdired
     wgrep
     wgrep-ag
+    guru-mode
     swift-mode
     ruby-mode
     js3-mode
@@ -26,7 +27,6 @@
     haml-mode
     sass-mode
     scss-mode
-    guru-mode
    ))
 
 (let ((not-installed (loop for x in installing-package-list
