@@ -27,6 +27,7 @@
     sass-mode
     scss-mode
     elm-mode
+    terraform-mode
    ))
 
 (let ((not-installed (loop for x in installing-package-list
