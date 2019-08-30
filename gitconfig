@@ -37,7 +37,7 @@ logg = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
 pom  = push origin master
 delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [user]
-  email = danny.dev8@gmail.com
+  email = 98850+f96q@users.noreply.github.com
   name = danny
 [pull]
   rebase = true
