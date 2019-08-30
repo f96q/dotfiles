@@ -5,6 +5,8 @@
 (setq auto-mode-alist
       (append '(("\\.rake$" . ruby-mode)) auto-mode-alist))
 
+(setq ruby-insert-encoding-magic-comment nil)
+
 (add-hook 'ruby-mode-hook
           '(lambda()
              (progn
