@@ -2,8 +2,10 @@ export LANG=ja_JP.UTF-8
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$PATH:`yarn global bin`"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [[ -e "$HOME/$HOME/.rbenv/bin/rbenv" ]] then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
 # ostype
 
@@ -23,10 +25,10 @@ alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
 
 # ssh-agent
 [[ -e "$HOME/.ssh/id_rsa" ]] && ssh-add "$HOME/.ssh/id_rsa"
+[[ -e "$HOME/.ssh/id_ed25519" ]] && ssh-add "$HOME/.ssh/id_ed25519"
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-[[ -e "$HOME/.ssh/id_ed25519" ]] && ssh-add "$HOME/.ssh/id_ed25519"
 
 # keybind
 bindkey -e
