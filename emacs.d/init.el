@@ -15,18 +15,12 @@
     wdired
     wgrep
     wgrep-ag
-    guru-mode
-    swift-mode
     ruby-mode
     js3-mode
-    coffee-mode
+    typescript-mode
     go-mode
-    elixir-mode
     yaml-mode
-    haml-mode
-    sass-mode
     scss-mode
-    elm-mode
     terraform-mode
    ))
 
