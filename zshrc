@@ -1,14 +1,16 @@
 export LANG=ja_JP.UTF-8
+
+# yarn
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$PATH:`yarn global bin`"
 
+# rbenv
 if [[ -e "$HOME/$HOME/.rbenv/bin/rbenv" ]] then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
 # ostype
-
 if [[ $OSTYPE == darwin* ]] then
   export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
   export PATH=$HOME/homebrew/bin:$PATH
