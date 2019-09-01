@@ -1,9 +1,6 @@
 (autoload 'typescript-mode "typescript-mode" "typescript" t)
 (setq auto-mode-alist
-      (append '(("\\.ts$" . typescript-mode))
-              auto-mode-alist))
-(setq auto-mode-alist
-      (append '(("\\.tsx$" . typescript-mode))
+      (append '(("\\.tsx?$" . typescript-mode))
               auto-mode-alist))
 
 (add-hook 'typescript-mode-hook
