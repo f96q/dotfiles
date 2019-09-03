@@ -5,7 +5,7 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$PATH:`yarn global bin`"
 
 # rbenv
-if [[ -e "$HOME/$HOME/.rbenv/bin/rbenv" ]] then
+if [[ -e "$HOME/.rbenv/bin/rbenv" ]] then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
