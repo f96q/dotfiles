@@ -10,6 +10,12 @@ if [[ -e "$HOME/.rbenv/bin/rbenv" ]] then
   eval "$(rbenv init -)"
 fi
 
+# nodenv
+if [[ -e "$HOME/.nodenv/bin/nodenv" ]] then
+  export PATH="$HOME/.nodenv/bin:$PATH"
+  eval "$(nodenv init -)"
+fi
+
 # ostype
 if [[ $OSTYPE == darwin* ]] then
   export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
