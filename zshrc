@@ -17,6 +17,13 @@ if [[ -e "$HOME/.nodenv/bin/nodenv" ]] then
   eval "$(nodenv init -)"
 fi
 
+# goenv
+if [[ -e "$HOME/.goenv/bin/goenv" ]] then
+  export GOENV_ROOT="$HOME/.goenv"
+  export PATH="$GOENV_ROOT/bin:$PATH"
+  eval "$(goenv init -)"
+fi
+
 # ostype
 if [[ $OSTYPE == darwin* ]] then
   export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
