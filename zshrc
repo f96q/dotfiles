@@ -24,13 +24,6 @@ if [[ -e "$HOME/.goenv/bin/goenv" ]] then
   eval "$(goenv init -)"
 fi
 
-# ostype
-if [[ $OSTYPE == darwin* ]] then
-  export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
-  export PATH=$HOME/homebrew/bin:$PATH
-  alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
-fi
-
 # term
 export TERM=xterm-256color
 
