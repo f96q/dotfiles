@@ -2,7 +2,7 @@
       (cons "~/.emacs.d/elisp" load-path))
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
 (require 'cl)
