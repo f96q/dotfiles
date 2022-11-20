@@ -1,0 +1,60 @@
+in:
+  # type: file
+  # path_prefix: AWSLogs/
+  type: s3
+  bucket: <S3_BUCKET>
+  path_prefix: <PAHT_PREFIX>
+  auth_method: profile
+  profile_name: <AWS_PROFILE_NAME>
+  parser:
+    charset: UTF-8
+    newline: LF
+    type: csv
+    delimiter: ' '
+    quote: ''
+    escape: ''
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    null_string: "-"
+    columns:
+      - {name: time, type: timestamp, format: '%Y-%m-%dT%H:%M:%S.%NZ'}
+      - {name: type, type: string}
+      - {name: elb, type: string}
+      - {name: client_port, type: string}
+      - {name: target_port, type: string}
+      - {name: request_processing_time, type: double}
+      - {name: target_processing_time, type: double}
+      - {name: response_processing_time, type: double}
+      - {name: elb_status_code, type: long}
+      - {name: target_status_code, type: long}
+      - {name: received_bytes, type: long}
+      - {name: send_bytes, type: long}
+      - {name: request, type: string}
+      - {name: user_agent, type: string}
+      - {name: ssl_cipher, type: string}
+      - {name: ssl_protocol, type: string}
+      - {name: target_group_arn, type: string}
+      - {name: trace_id, type: string}
+      - {name: domain_name, type: string}
+      - {name: chosen_cert_arn, type: string}
+      - {name: matched_rule_priority, type: long}
+      - {name: request_creation_time, type: string}
+      - {name: actions_executed, type: string}
+      - {name: redirect_url, type: string}
+      - {name: error_reason, type: string}
+      - {name: target_port_list, type: string}
+      - {name: target_status_code_list, type: string}
+      - {name: classification, type: string}
+      - {name: classification_reason, type: string}
+  decoders:
+    - {type: gzip}
+out:
+  type: postgresql
+  host: localhost
+  user: <DATABASE_USER>
+  password: <DATABASE_PASSWORD>
+  database: alb_logs
+  table: alb_logs
+  mode: replace
