@@ -1,3 +1,4 @@
+setenv COLORTERM ""
 vbell off
 startup_message off
 escape ^T^T
