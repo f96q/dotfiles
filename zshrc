@@ -14,6 +14,11 @@ if [[ -e "/opt/homebrew/bin/nodenv" ]] then
   eval "$(nodenv init -)"
 fi
 
+# goenv
+if [[ -e "/opt/homebrew/bin/goenv" ]] then
+  eval "$(goenv init -)"
+fi
+
 # ssh-agent
 [[ -e "$HOME/.ssh/id_rsa" ]] && ssh-add "$HOME/.ssh/id_rsa"
 [[ -e "$HOME/.ssh/id_ed25519" ]] && ssh-add "$HOME/.ssh/id_ed25519"
