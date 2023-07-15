@@ -16,6 +16,7 @@ cask "session-manager-plugin"
 brew "knqyf263/utern/utern"
 
 # others
+brew "mas"
 cask "slack"
 cask "google-chrome"
 cask "google-japanese-ime"
