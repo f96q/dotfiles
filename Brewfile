@@ -1,8 +1,10 @@
 # development
 cask "iterm2"
+brew "git"
 brew "emacs"
 brew "screen"
 brew "the_silver_searcher"
+brew "jq"
 brew "goenv"
 brew "nodenv"
 
@@ -16,6 +18,7 @@ cask "session-manager-plugin"
 brew "knqyf263/utern/utern"
 
 # others
+brew "mas"
 cask "slack"
 cask "google-chrome"
 cask "google-japanese-ime"
