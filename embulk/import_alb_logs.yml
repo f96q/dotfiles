@@ -3,7 +3,7 @@ in:
   # path_prefix: AWSLogs/
   type: s3
   bucket: <S3_BUCKET>
-  path_prefix: <PAHT_PREFIX>
+  path_prefix: <prefix>/AWSLogs/<aws-account-id>/elasticloadbalancing/ap-northeast-1/2023/17/15/
   auth_method: profile
   profile_name: <AWS_PROFILE_NAME>
   parser:
