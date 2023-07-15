@@ -9,6 +9,11 @@ alias g=git
 alias gr='find . -type f | xargs grep -e $1'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
 
+# nodenv
+if [[ -e "/opt/homebrew/bin/nodenv" ]] then
+  eval "$(nodenv init -)"
+fi
+
 # ssh-agent
 [[ -e "$HOME/.ssh/id_rsa" ]] && ssh-add "$HOME/.ssh/id_rsa"
 [[ -e "$HOME/.ssh/id_ed25519" ]] && ssh-add "$HOME/.ssh/id_ed25519"
