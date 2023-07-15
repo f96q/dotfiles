@@ -1,5 +1,6 @@
 # development
 cask "iterm2"
+brew "git"
 brew "emacs"
 brew "screen"
 brew "the_silver_searcher"
