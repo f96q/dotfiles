@@ -1,29 +1,6 @@
 export LANG=ja_JP.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
 
-# yarn
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="$PATH:`yarn global bin`"
-
-# rbenv
-if [[ -e "$HOME/.rbenv/bin/rbenv" ]] then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
-
-# nodenv
-if [[ -e "$HOME/.nodenv/bin/nodenv" ]] then
-  export PATH="$HOME/.nodenv/bin:$PATH"
-  eval "$(nodenv init -)"
-fi
-
-# goenv
-if [[ -e "$HOME/.goenv/bin/goenv" ]] then
-  export GOENV_ROOT="$HOME/.goenv"
-  export PATH="$GOENV_ROOT/bin:$PATH"
-  eval "$(goenv init -)"
-fi
-
 # term
 export TERM=xterm-256color
 
