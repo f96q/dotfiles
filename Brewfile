@@ -3,6 +3,7 @@ cask "iterm2"
 brew "emacs"
 brew "screen"
 brew "the_silver_searcher"
+brew "jq"
 brew "goenv"
 brew "nodenv"
 
